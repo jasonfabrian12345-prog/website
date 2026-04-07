@@ -10,7 +10,7 @@ body {
   background: #f6f7fb;
 }
 
-/* 🔥 BACKGROUND GLOW (HALUS) */
+/* 🔥 BACKGROUND GLOW */
 body::before {
   content: "";
   position: fixed;
@@ -47,7 +47,7 @@ nav {
 
 /* LOGO */
 .logo img {
-  height: 70px;
+  height: 150px;
   width: auto;
 }
 
@@ -89,35 +89,34 @@ nav ul li {
   max-width: 900px;
 }
 
-/* 🔥 HEADLINE (FINAL – CLEAN STYLE) */
+/* 🔥 HEADLINE FINAL */
 .content h1 {
   font-size: 95px;
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1.5px;
 
+  /* 🔥 GRADIENT KUAT (TIDAK ABU-ABU) */
   background: linear-gradient(
     90deg,
-    #00c6ff,
-    #7a5cff,
-    #ff4ecd
+    #00cfff,
+    #5b5cff,
+    #ff00cc
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* super halus biar tetap tajam */
-  text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  text-shadow: none;
 }
 
-/* BARIS 1 (GESER + NO WRAP) */
+/* 🔥 ALIGNMENT FIX */
 .line1 {
   display: inline-block;
-  transform: translateX(30px);
+  transform: translateX(15px); /* sudah sejajar */
   white-space: nowrap;
 }
 
-/* BARIS 2 */
 .line2 {
   display: inline-block;
 }
