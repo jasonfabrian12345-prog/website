@@ -10,7 +10,7 @@ body {
   background: #f7f7f7;
 }
 
-/* BACKGROUND GLOW */
+/* GLOW */
 body::before {
   content: "";
   position: fixed;
@@ -45,10 +45,9 @@ nav {
   z-index: 2;
 }
 
-/* LOGO (DIPERBESAR) */
+/* LOGO */
 .logo img {
-  height: 40px; /* sebelumnya 28px → sekarang lebih besar */
-  width: auto;
+  height: 40px;
 }
 
 /* MENU */
@@ -65,7 +64,7 @@ nav ul li {
   cursor: pointer;
 }
 
-/* BUTTON */
+/* CONTACT BUTTON */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -86,16 +85,17 @@ nav ul li {
   z-index: 2;
 }
 
-/* CONTENT */
 .content {
   max-width: 800px;
 }
 
-/* TITLE */
+/* TITLE FIX */
 .content h1 {
   font-size: 90px;
   font-weight: 700;
-  line-height: 1.1;
+
+  line-height: 1.05;        /* rapetin jarak antar baris */
+  letter-spacing: -1px;     /* penting: rapetin antar huruf */
 
   background: linear-gradient(90deg, #00cfff, #7b5cff, #ff00cc);
   background-clip: text;
@@ -105,7 +105,7 @@ nav ul li {
   -webkit-text-fill-color: transparent;
 }
 
-/* DESC */
+/* DESCRIPTION */
 .content p {
   margin-top: 25px;
   font-size: 18px;
@@ -113,7 +113,7 @@ nav ul li {
   max-width: 600px;
 }
 
-/* BUTTON GROUP */
+/* BUTTON */
 .btn-group {
   margin-top: 35px;
   display: flex;
