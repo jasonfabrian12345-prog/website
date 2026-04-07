@@ -10,45 +10,19 @@ body {
   background: #f6f7fb;
 }
 
-/* BACKGROUND GLOW */
-body::before {
-  content: "";
-  position: fixed;
-  bottom: -200px;
-  left: -200px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #ff00cc, transparent);
-  filter: blur(140px);
-  z-index: 0;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  right: -200px;
-  top: 80px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #00cfff, transparent);
-  filter: blur(140px);
-  z-index: 0;
-}
-
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 100px;
-  position: relative;
-  z-index: 2;
 }
 
-/* LOGO */
+/* 🔥 LOGO FIX (besar & stabil) */
 .logo img {
-  height: 150px;
+  height: 70px !important;
   width: auto;
+  display: block;
 }
 
 /* MENU */
@@ -72,8 +46,6 @@ nav ul li {
   padding: 10px 22px;
   border-radius: 25px;
   color: white;
-  font-size: 12px;
-  cursor: pointer;
 }
 
 /* HERO */
@@ -82,66 +54,43 @@ nav ul li {
   display: flex;
   align-items: center;
   padding-left: 100px;
-  position: relative;
-  z-index: 2;
 }
 
-/* CONTENT */
 .content {
   max-width: 850px;
 }
 
-/* 🔥 HEADLINE SUPER HIDUP */
+/* 🔥 HEADLINE SUPER BOLD */
 .content h1 {
-  font-size: 100px;
+  font-size: 95px;
   font-weight: 900;
   line-height: 1.05;
-  letter-spacing: -1.5px;
-
-  background: linear-gradient(
-    90deg,
-    #00cfff,
-    #6a6cff,
-    #ff00cc,
-    #00cfff
-  );
-  background-size: 300%;
-
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  animation: gradientMove 6s linear infinite;
-
-  /* Biar kelihatan bold */
-  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
-
-  /* Glow */
-  text-shadow: 
-    0 2px 5px rgba(0,0,0,0.1),
-    0 0 15px rgba(0, 207, 255, 0.3),
-    0 0 25px rgba(255, 0, 204, 0.2);
+  letter-spacing: -1px;
+  color: black; /* sementara biar bold terlihat jelas */
 }
 
-/* ANIMASI */
-@keyframes gradientMove {
-  0% { background-position: 0%; }
-  100% { background-position: 300%; }
+/* 🔥 BARIS 1 DIGESER KE TENGAH */
+.line1 {
+  display: inline-block;
+  transform: translateX(40px); /* atur 30–60px sesuai selera */
+}
+
+/* BARIS 2 NORMAL */
+.line2 {
+  display: inline-block;
 }
 
 /* DESCRIPTION */
 .content p {
-  margin-top: 30px;
+  margin-top: 25px;
   font-size: 18px;
-  color: #000000;
+  color: #555;
   max-width: 600px;
 }
 
 /* BUTTON GROUP */
 .btn-group {
-  margin-top: 40px;
+  margin-top: 35px;
   display: flex;
   gap: 20px;
 }
@@ -153,7 +102,6 @@ nav ul li {
   padding: 15px 30px;
   border-radius: 30px;
   color: white;
-  font-size: 14px;
   cursor: pointer;
 }
 
@@ -161,19 +109,11 @@ nav ul li {
 .btn2 {
   padding: 15px 30px;
   border-radius: 30px;
-  font-size: 14px;
   cursor: pointer;
 
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #333;
-
-  transition: 0.3s;
-}
-
-.btn2:hover {
-  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.3);
 }
