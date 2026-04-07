@@ -5,12 +5,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* BODY + BACKGROUND */
+/* BODY */
 body {
   background: #f6f7fb;
 }
 
-/* 🔥 GLOW BACKGROUND BALIK */
+/* 🔥 GLOW BACKGROUND */
 body::before {
   content: "";
   position: fixed;
@@ -45,9 +45,10 @@ nav {
   z-index: 2;
 }
 
-/* LOGO */
+/* LOGO (FIX BESAR) */
 .logo img {
-  height: 70px !important;
+  height: 150px !important;
+  width: auto;
 }
 
 /* MENU */
@@ -64,7 +65,7 @@ nav ul li {
   cursor: pointer;
 }
 
-/* CONTACT */
+/* CONTACT BUTTON */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -85,33 +86,36 @@ nav ul li {
 
 /* CONTENT */
 .content {
-  max-width: 850px;
+  max-width: 900px;
 }
 
-/* 🔥 HEADLINE FINAL (BOLD + GRADIENT + GLOW) */
+/* 🔥 HEADLINE FINAL */
 .content h1 {
   font-size: 95px;
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1px;
 
+  /* GRADIENT */
   background: linear-gradient(90deg, #00cfff, #6a6cff, #ff00cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* biar tetap kelihatan bold */
+  /* GLOW */
   text-shadow:
     0 2px 4px rgba(0,0,0,0.15),
     0 0 10px rgba(0, 207, 255, 0.3),
     0 0 20px rgba(255, 0, 204, 0.2);
 }
 
-/* BARIS 1 GESER */
+/* BARIS 1 */
 .line1 {
   display: inline-block;
   transform: translateX(40px);
+  white-space: nowrap; /* 🔥 tidak pecah */
 }
 
+/* BARIS 2 */
 .line2 {
   display: inline-block;
 }
@@ -131,22 +135,25 @@ nav ul li {
   gap: 20px;
 }
 
-/* BUTTON 1 */
+/* BUTTON PRIMARY */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
   padding: 15px 30px;
   border-radius: 30px;
   color: white;
+  cursor: pointer;
 }
 
 /* 🔥 GLASS BUTTON */
 .btn2 {
   padding: 15px 30px;
   border-radius: 30px;
+  cursor: pointer;
 
   background: rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   border: 1px solid rgba(255,255,255,0.3);
 }
