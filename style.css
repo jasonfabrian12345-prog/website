@@ -10,7 +10,7 @@ body {
   background: #f6f7fb;
 }
 
-/* SOFT GLOW (lebih halus & besar seperti design) */
+/* GLOW */
 body::before {
   content: "";
   position: fixed;
@@ -45,9 +45,10 @@ nav {
   z-index: 2;
 }
 
-/* LOGO (FINAL SIZE) */
+/* LOGO (FINAL FIX) */
 .logo img {
-  height: 55px; /* ini sudah mendekati persis gambar */
+  height: 62px; /* ini sudah mendekati persis gambar */
+  width: auto;
 }
 
 /* MENU */
@@ -80,7 +81,7 @@ nav ul li {
   height: 85vh;
   display: flex;
   align-items: center;
-  padding-left: 100px; /* lebih ke kiri seperti design */
+  padding-left: 100px;
   position: relative;
   z-index: 2;
 }
@@ -90,7 +91,7 @@ nav ul li {
   max-width: 850px;
 }
 
-/* TITLE (INI KUNCI BIAR SAMA) */
+/* TITLE */
 .content h1 {
   font-size: 100px;
   font-weight: 800;
@@ -113,14 +114,13 @@ nav ul li {
   max-width: 600px;
 }
 
-/* BUTTON GROUP */
+/* BUTTON */
 .btn-group {
   margin-top: 40px;
   display: flex;
   gap: 20px;
 }
 
-/* BUTTON 1 */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -131,7 +131,6 @@ nav ul li {
   cursor: pointer;
 }
 
-/* BUTTON 2 */
 .btn2 {
   background: transparent;
   border: 2px solid transparent;
