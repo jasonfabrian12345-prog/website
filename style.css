@@ -5,27 +5,34 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* GLOW BACKGROUND */
+/* BODY */
+body {
+  background: #f7f7f7;
+}
+
+/* BACKGROUND GLOW (FIXED) */
 body::before {
   content: "";
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
+  position: fixed;
+  bottom: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
   background: radial-gradient(circle, #ff00cc, transparent);
-  filter: blur(120px);
+  filter: blur(100px);
+  z-index: 0;
 }
 
 body::after {
   content: "";
-  position: absolute;
-  right: -100px;
+  position: fixed;
+  right: -150px;
   top: 100px;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background: radial-gradient(circle, #00cfff, transparent);
-  filter: blur(120px);
+  filter: blur(100px);
+  z-index: 0;
 }
 
 /* NAVBAR */
@@ -39,7 +46,7 @@ nav {
 }
 
 .logo img {
-  height: 150px;
+  height: 28px;
 }
 
 /* MENU */
@@ -56,7 +63,7 @@ nav ul li {
   cursor: pointer;
 }
 
-/* CONTACT BUTTON */
+/* BUTTON */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -77,11 +84,12 @@ nav ul li {
   z-index: 2;
 }
 
+/* CONTENT */
 .content {
-  max-width: 900px;
+  max-width: 800px;
 }
 
-/* TITLE */
+/* TITLE FIX */
 .content h1 {
   font-size: 90px;
   font-weight: 700;
@@ -95,7 +103,7 @@ nav ul li {
   -webkit-text-fill-color: transparent;
 }
 
-/* DESCRIPTION */
+/* DESC */
 .content p {
   margin-top: 25px;
   font-size: 18px;
@@ -103,7 +111,7 @@ nav ul li {
   max-width: 600px;
 }
 
-/* BUTTON */
+/* BUTTON GROUP */
 .btn-group {
   margin-top: 35px;
   display: flex;
@@ -120,7 +128,6 @@ nav ul li {
   cursor: pointer;
 }
 
-/* OUTLINE BUTTON */
 .btn2 {
   background: transparent;
   border: 2px solid transparent;
