@@ -27,7 +27,7 @@ nav {
 }
 
 .logo img {
-  height: 40px;
+  height: 20px; /* sudah diperkecil 2x dari 40px */
   width: auto;
 }
 
