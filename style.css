@@ -6,7 +6,9 @@
 }
 
 body {
-  background: #f6f7fb;
+  background:  #00cfff,
+    #5b5cff,
+    #ff00cc;
 }
 
 /* NAVBAR */
