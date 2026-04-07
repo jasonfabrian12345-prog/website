@@ -7,31 +7,31 @@
 
 /* BODY */
 body {
-  background: #f7f7f7;
+  background: #f6f7fb;
 }
 
-/* GLOW */
+/* SOFT GLOW (lebih halus & besar seperti design) */
 body::before {
   content: "";
   position: fixed;
-  bottom: -150px;
-  left: -150px;
-  width: 300px;
-  height: 300px;
+  bottom: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(circle, #ff00cc, transparent);
-  filter: blur(100px);
+  filter: blur(140px);
   z-index: 0;
 }
 
 body::after {
   content: "";
   position: fixed;
-  right: -150px;
-  top: 100px;
-  width: 300px;
-  height: 300px;
+  right: -200px;
+  top: 80px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(circle, #00cfff, transparent);
-  filter: blur(100px);
+  filter: blur(140px);
   z-index: 0;
 }
 
@@ -39,23 +39,22 @@ body::after {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 25px 80px;
   align-items: center;
+  padding: 30px 100px;
   position: relative;
   z-index: 2;
 }
 
-/* LOGO (FIX FINAL) */
+/* LOGO (FINAL SIZE) */
 .logo img {
-  height: 80px; /* diperbesar lagi */
-  width: auto;
+  height: 55px; /* ini sudah mendekati persis gambar */
 }
 
 /* MENU */
 nav ul {
   display: flex;
+  gap: 35px;
   list-style: none;
-  gap: 30px;
   align-items: center;
 }
 
@@ -65,12 +64,12 @@ nav ul li {
   cursor: pointer;
 }
 
-/* CONTACT BUTTON */
+/* CONTACT */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 10px 22px;
+  border-radius: 25px;
   color: white;
   font-size: 12px;
   cursor: pointer;
@@ -78,26 +77,27 @@ nav ul li {
 
 /* HERO */
 .hero {
+  height: 85vh;
   display: flex;
   align-items: center;
-  height: 85vh;
-  padding: 0 80px;
+  padding-left: 100px; /* lebih ke kiri seperti design */
   position: relative;
   z-index: 2;
 }
 
+/* CONTENT */
 .content {
-  max-width: 800px;
+  max-width: 850px;
 }
 
-/* TITLE */
+/* TITLE (INI KUNCI BIAR SAMA) */
 .content h1 {
-  font-size: 90px;
-  font-weight: 700;
+  font-size: 100px;
+  font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 
-  background: linear-gradient(90deg, #00cfff, #7b5cff, #ff00cc);
+  background: linear-gradient(90deg, #00cfff, #6a6cff, #ff00cc);
   background-clip: text;
   -webkit-background-clip: text;
 
@@ -107,33 +107,35 @@ nav ul li {
 
 /* DESC */
 .content p {
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 18px;
-  color: #555;
+  color: #5a5a5a;
   max-width: 600px;
 }
 
-/* BUTTON */
+/* BUTTON GROUP */
 .btn-group {
-  margin-top: 35px;
+  margin-top: 40px;
   display: flex;
   gap: 20px;
 }
 
+/* BUTTON 1 */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 14px 28px;
+  padding: 15px 30px;
   border-radius: 30px;
   color: white;
   font-size: 14px;
   cursor: pointer;
 }
 
+/* BUTTON 2 */
 .btn2 {
   background: transparent;
   border: 2px solid transparent;
-  padding: 14px 28px;
+  padding: 15px 30px;
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
