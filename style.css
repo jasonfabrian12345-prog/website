@@ -5,8 +5,34 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY + BACKGROUND */
 body {
   background: #f6f7fb;
+}
+
+/* 🔥 GLOW BACKGROUND BALIK */
+body::before {
+  content: "";
+  position: fixed;
+  bottom: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #ff00cc, transparent);
+  filter: blur(140px);
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  right: -200px;
+  top: 80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #00cfff, transparent);
+  filter: blur(140px);
+  z-index: 0;
 }
 
 /* NAVBAR */
@@ -15,13 +41,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 30px 100px;
+  position: relative;
+  z-index: 2;
 }
 
-/* 🔥 LOGO FIX (PAKSA BESAR) */
+/* LOGO */
 .logo img {
   height: 70px !important;
-  width: auto;
-  display: block;
 }
 
 /* MENU */
@@ -34,9 +60,11 @@ nav ul {
 
 nav ul li {
   font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-/* BUTTON */
+/* CONTACT */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -51,42 +79,49 @@ nav ul li {
   display: flex;
   align-items: center;
   padding-left: 100px;
+  position: relative;
+  z-index: 2;
 }
 
+/* CONTENT */
 .content {
   max-width: 850px;
 }
 
-/* 🔥 HEADLINE FIX (BENERAN BOLD) */
+/* 🔥 HEADLINE FINAL (BOLD + GRADIENT + GLOW) */
 .content h1 {
   font-size: 95px;
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -1px;
 
-  /* trik: pakai warna dulu biar bold kelihatan */
-  color: black;
-}
-
-/* 🔥 OPTIONAL: kalau mau balik ke gradient tapi tetap bold */
-.content h1.gradient {
   background: linear-gradient(90deg, #00cfff, #6a6cff, #ff00cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-weight: 900;
-
-  /* ini bikin tetap tebal */
-  text-shadow: 
-    0 2px 2px rgba(0,0,0,0.2),
-    0 0 10px rgba(0,0,0,0.1);
+  /* biar tetap kelihatan bold */
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.15),
+    0 0 10px rgba(0, 207, 255, 0.3),
+    0 0 20px rgba(255, 0, 204, 0.2);
 }
 
-/* DESC */
+/* BARIS 1 GESER */
+.line1 {
+  display: inline-block;
+  transform: translateX(40px);
+}
+
+.line2 {
+  display: inline-block;
+}
+
+/* DESCRIPTION */
 .content p {
   margin-top: 25px;
   font-size: 18px;
   color: #555;
+  max-width: 600px;
 }
 
 /* BUTTON GROUP */
@@ -96,7 +131,7 @@ nav ul li {
   gap: 20px;
 }
 
-/* BTN 1 */
+/* BUTTON 1 */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -105,7 +140,7 @@ nav ul li {
   color: white;
 }
 
-/* BTN 2 GLASS */
+/* 🔥 GLASS BUTTON */
 .btn2 {
   padding: 15px 30px;
   border-radius: 30px;
