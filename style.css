@@ -7,31 +7,31 @@
 
 /* BODY */
 body {
-  background: #f6f7fb;
+  background: #f7f8fc;
 }
 
-/* 🔥 BACKGROUND GLOW */
+/* 🌈 BACKGROUND GLOW (LEBIH SOFT & NATURAL) */
 body::before {
   content: "";
   position: fixed;
-  bottom: -200px;
-  left: -200px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #ff00cc, transparent);
-  filter: blur(120px);
+  bottom: -250px;
+  left: -250px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #ff00cc30, transparent);
+  filter: blur(160px);
   z-index: 0;
 }
 
 body::after {
   content: "";
   position: fixed;
-  right: -200px;
-  top: 80px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #00cfff, transparent);
-  filter: blur(120px);
+  right: -250px;
+  top: 50px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #00cfff30, transparent);
+  filter: blur(160px);
   z-index: 0;
 }
 
@@ -40,21 +40,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 100px;
+  padding: 30px 110px;
   position: relative;
   z-index: 2;
 }
 
 /* LOGO */
 .logo img {
-  height: 150px;
-  width: auto;
+  height: 72px;
 }
 
 /* MENU */
 nav ul {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   list-style: none;
   align-items: center;
 }
@@ -69,7 +68,7 @@ nav ul li {
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 10px 22px;
+  padding: 10px 24px;
   border-radius: 25px;
   color: white;
 }
@@ -79,41 +78,41 @@ nav ul li {
   height: 85vh;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  padding-left: 110px;
   position: relative;
   z-index: 2;
 }
 
 /* CONTENT */
 .content {
-  max-width: 900px;
+  max-width: 950px;
 }
 
-/* 🔥 HEADLINE FINAL */
+/* 🔥 HEADLINE (PIXEL PERFECT STYLE) */
 .content h1 {
-  font-size: 95px;
+  font-size: 102px;
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -1.5px;
+  line-height: 1.02;
 
-  /* 🔥 GRADIENT KUAT (TIDAK ABU-ABU) */
+  /* 🔥 SPACING MIRIP DESIGN */
+  letter-spacing: -2px;
+
+  /* 🎨 GRADIENT HALUS BANGET */
   background: linear-gradient(
-    90deg,
-    #00cfff,
-    #5b5cff,
-    #ff00cc
+    95deg,
+    #00d1ff,
+    #6a5cff,
+    #ff2fd1
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: none;
 }
 
-/* 🔥 ALIGNMENT FIX */
+/* 🔥 ALIGNMENT PRESISI (OPTICAL) */
 .line1 {
   display: inline-block;
-  transform: translateX(15px); /* sudah sejajar */
+  transform: translateX(12px); /* kecil & presisi */
   white-space: nowrap;
 }
 
@@ -123,38 +122,39 @@ nav ul li {
 
 /* DESCRIPTION */
 .content p {
-  margin-top: 25px;
+  margin-top: 28px;
   font-size: 18px;
-  color: #555;
-  max-width: 600px;
+  color: #5a5a5a;
+  max-width: 620px;
 }
 
 /* BUTTON GROUP */
 .btn-group {
-  margin-top: 35px;
+  margin-top: 40px;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 /* BUTTON PRIMARY */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 15px 30px;
+  padding: 16px 34px;
   border-radius: 30px;
   color: white;
+  font-size: 14px;
   cursor: pointer;
 }
 
-/* 🔥 GLASS BUTTON */
+/* 🧊 GLASS BUTTON (LEBIH REALISTIS) */
 .btn2 {
-  padding: 15px 30px;
+  padding: 16px 34px;
   border-radius: 30px;
   cursor: pointer;
 
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.4);
 }
