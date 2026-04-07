@@ -5,6 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BODY */
 body {
   background: #f6f7fb;
 }
@@ -57,7 +58,7 @@ nav ul li {
   max-width: 900px;
 }
 
-/* 🔥 HEADLINE BASE */
+/* 🔥 HEADLINE */
 .content h1 {
   font-size: 95px;
   font-weight: 900;
@@ -65,7 +66,7 @@ nav ul li {
   letter-spacing: -1px;
 }
 
-/* 🔥 GRADIENT + GLOW */
+/* 🔥 GRADIENT (NO BLUR) */
 .content h1.gradient {
   background: linear-gradient(
     90deg,
@@ -77,13 +78,10 @@ nav ul li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* glow halus */
-  text-shadow:
-    0 0 2px rgba(0,0,0,0.2),
-    0 0 8px rgba(0, 207, 255, 0.3);
+  text-shadow: none; /* penting biar tajam */
 }
 
-/* 🔥 FIX AGAR TIDAK PECAH */
+/* 🔥 NO WRAP */
 .line1 {
   display: inline-block;
   white-space: nowrap;
@@ -93,7 +91,7 @@ nav ul li {
   display: inline-block;
 }
 
-/* DESC */
+/* DESCRIPTION */
 .content p {
   margin-top: 25px;
   font-size: 18px;
@@ -108,22 +106,34 @@ nav ul li {
   gap: 20px;
 }
 
-/* BUTTON 1 */
+/* BUTTON PRIMARY */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
   padding: 15px 30px;
   border-radius: 30px;
   color: white;
+  cursor: pointer;
 }
 
-/* BUTTON 2 GLASS */
+/* 🔥 GLASS BUTTON REAL */
 .btn2 {
   padding: 15px 30px;
   border-radius: 30px;
+  cursor: pointer;
 
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.05),
+    inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+/* HOVER EFFECT */
+.btn2:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
