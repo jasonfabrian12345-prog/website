@@ -10,7 +10,7 @@ body {
   background: #f6f7fb;
 }
 
-/* GLOW */
+/* SOFT GLOW (lebih halus & besar seperti design) */
 body::before {
   content: "";
   position: fixed;
@@ -45,8 +45,9 @@ nav {
   z-index: 2;
 }
 
+/* LOGO (FINAL SIZE) */
 .logo img {
-  height: 62px;
+  height: 145px; /* ini sudah mendekati persis gambar */
 }
 
 /* MENU */
@@ -79,16 +80,17 @@ nav ul li {
   height: 85vh;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  padding-left: 100px; /* lebih ke kiri seperti design */
   position: relative;
   z-index: 2;
 }
 
+/* CONTENT */
 .content {
   max-width: 850px;
 }
 
-/* TITLE */
+/* TITLE (INI KUNCI BIAR SAMA) */
 .content h1 {
   font-size: 100px;
   font-weight: 800;
@@ -118,7 +120,7 @@ nav ul li {
   gap: 20px;
 }
 
-/* BUTTON PRIMARY */
+/* BUTTON 1 */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
@@ -129,25 +131,17 @@ nav ul li {
   cursor: pointer;
 }
 
-/* GLASS BUTTON 🔥 */
+/* BUTTON 2 */
 .btn2 {
+  background: transparent;
+  border: 2px solid transparent;
   padding: 15px 30px;
   border-radius: 30px;
   font-size: 14px;
   cursor: pointer;
 
-  background: rgba(255, 255, 255, 0.15); /* transparan */
-  backdrop-filter: blur(10px);          /* efek kaca */
-  -webkit-backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #333;
-
-  transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.btn2:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(45deg, #00cfff, #ff00cc);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
