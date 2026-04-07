@@ -1,159 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flick</title>
+  <link rel="stylesheet" href="style.css">
 
-/* BODY */
-body {
-  background: #f6f7fb;
-}
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* 🔥 GLOW BACKGROUND */
-body::before {
-  content: "";
-  position: fixed;
-  bottom: -200px;
-  left: -200px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #ff00cc, transparent);
-  filter: blur(140px);
-  z-index: 0;
-}
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+    </div>
 
-body::after {
-  content: "";
-  position: fixed;
-  right: -200px;
-  top: 80px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, #00cfff, transparent);
-  filter: blur(140px);
-  z-index: 0;
-}
+    <ul>
+      <li>HOME</li>
+      <li>SERVICE</li>
+      <li>ABOUT US</li>
+      <li><button class="contact">CONTACT</button></li>
+    </ul>
+  </nav>
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 100px;
-  position: relative;
-  z-index: 2;
-}
+  <!-- HERO -->
+  <section class="hero">
+    <div class="content">
 
-/* LOGO (FIX BESAR) */
-.logo img {
-  height: 70px !important;
-  width: auto;
-}
+      <h1>
+        <span class="line1">Amplify Your Brand</span><br>
+        <span class="line2">Live & Online</span>
+      </h1>
 
-/* MENU */
-nav ul {
-  display: flex;
-  gap: 35px;
-  list-style: none;
-  align-items: center;
-}
+      <p>
+        We craft data-driven digital marketing strategies that connect your brand
+        with the right audience in real time, every time
+      </p>
 
-nav ul li {
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
+      <div class="btn-group">
+        <button class="btn1">Start Your Journey</button>
+        <button class="btn2">Explore Service</button>
+      </div>
 
-/* CONTACT BUTTON */
-.contact {
-  background: linear-gradient(45deg, #00cfff, #ff00cc);
-  border: none;
-  padding: 10px 22px;
-  border-radius: 25px;
-  color: white;
-}
+    </div>
+  </section>
 
-/* HERO */
-.hero {
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  padding-left: 100px;
-  position: relative;
-  z-index: 2;
-}
-
-/* CONTENT */
-.content {
-  max-width: 900px;
-}
-
-/* 🔥 HEADLINE FINAL */
-.content h1 {
-  font-size: 95px;
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -1px;
-
-  /* GRADIENT */
-  background: linear-gradient(90deg, #00cfff, #6a6cff, #ff00cc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* GLOW */
-  text-shadow:
-    0 2px 4px rgba(0,0,0,0.15),
-    0 0 10px rgba(0, 207, 255, 0.3),
-    0 0 20px rgba(255, 0, 204, 0.2);
-}
-
-/* BARIS 1 */
-.line1 {
-  display: inline-block;
-  transform: translateX(40px);
-  white-space: nowrap; /* 🔥 tidak pecah */
-}
-
-/* BARIS 2 */
-.line2 {
-  display: inline-block;
-}
-
-/* DESCRIPTION */
-.content p {
-  margin-top: 25px;
-  font-size: 18px;
-  color: #555;
-  max-width: 600px;
-}
-
-/* BUTTON GROUP */
-.btn-group {
-  margin-top: 35px;
-  display: flex;
-  gap: 20px;
-}
-
-/* BUTTON PRIMARY */
-.btn1 {
-  background: linear-gradient(45deg, #00cfff, #ff00cc);
-  border: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-/* 🔥 GLASS BUTTON */
-.btn2 {
-  padding: 15px 30px;
-  border-radius: 30px;
-  cursor: pointer;
-
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(255,255,255,0.3);
-}
+</body>
+</html>
