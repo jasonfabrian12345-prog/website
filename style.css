@@ -45,9 +45,10 @@ nav {
   z-index: 2;
 }
 
-/* LOGO */
+/* LOGO (FIX FINAL) */
 .logo img {
-  height: 40px;
+  height: 50px; /* diperbesar lagi */
+  width: auto;
 }
 
 /* MENU */
@@ -89,13 +90,12 @@ nav ul li {
   max-width: 800px;
 }
 
-/* TITLE FIX */
+/* TITLE */
 .content h1 {
   font-size: 90px;
   font-weight: 700;
-
-  line-height: 1.05;        /* rapetin jarak antar baris */
-  letter-spacing: -1px;     /* penting: rapetin antar huruf */
+  line-height: 1.05;
+  letter-spacing: -1px;
 
   background: linear-gradient(90deg, #00cfff, #7b5cff, #ff00cc);
   background-clip: text;
@@ -105,7 +105,7 @@ nav ul li {
   -webkit-text-fill-color: transparent;
 }
 
-/* DESCRIPTION */
+/* DESC */
 .content p {
   margin-top: 25px;
   font-size: 18px;
