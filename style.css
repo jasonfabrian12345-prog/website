@@ -5,94 +5,102 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* BACKGROUND */
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ffffff, #dbeafe, #e9d5ff);
+  background: #f8f8f8;
+  overflow: hidden;
+  position: relative;
+}
+
+/* GLOW BACKGROUND */
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #ff00cc, transparent);
+  filter: blur(120px);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #00cfff, transparent);
+  filter: blur(120px);
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
+  padding: 25px 80px;
   align-items: center;
-  padding: 30px 100px;
+  position: relative;
+  z-index: 2;
 }
 
-/* LOGO */
 .logo img {
-  height: 150px !important;
-  width: auto;
-  display: block;
+  height: 150px;
 }
 
 /* MENU */
 nav ul {
   display: flex;
-  gap: 35px;
   list-style: none;
+  gap: 30px;
   align-items: center;
 }
 
 nav ul li {
   font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 /* CONTACT BUTTON */
 .contact {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 10px 22px;
-  border-radius: 25px;
+  padding: 8px 18px;
+  border-radius: 20px;
   color: white;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
-  height: 85vh;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  height: 85vh;
+  padding: 0 80px;
+  position: relative;
+  z-index: 2;
 }
 
 .content {
   max-width: 900px;
 }
 
-/* HEADLINE */
+/* TITLE */
 .content h1 {
-  font-size: 95px;
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -1px;
-  overflow: visible; /* 🔥 penting */
-}
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1.1;
 
-/* GRADIENT FIX */
-.content h1.gradient {
-  display: inline-block; /* 🔥 render fix */
-
-  background: linear-gradient(
-    90deg,
-    #00cfff,
-    #5b5cff,
-    #ff00cc
-  );
-
+  background: linear-gradient(90deg, #00cfff, #7b5cff, #ff00cc);
+  background-clip: text;
   -webkit-background-clip: text;
+
+  color: transparent;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: none;
-}
-
-/* 🔥 FIX HURUF TERPOTONG */
-.line1 {
-  display: inline-block;
-  white-space: nowrap;
-  padding-right: 10px; /* 🔥 kunci supaya "d" muncul */
-}
-
-.line2 {
-  display: inline-block;
 }
 
 /* DESCRIPTION */
@@ -103,40 +111,34 @@ nav ul li {
   max-width: 600px;
 }
 
-/* BUTTON GROUP */
+/* BUTTON */
 .btn-group {
   margin-top: 35px;
   display: flex;
   gap: 20px;
 }
 
-/* BUTTON PRIMARY */
 .btn1 {
   background: linear-gradient(45deg, #00cfff, #ff00cc);
   border: none;
-  padding: 15px 30px;
+  padding: 14px 28px;
   border-radius: 30px;
   color: white;
+  font-size: 14px;
   cursor: pointer;
 }
 
-/* GLASS BUTTON */
+/* OUTLINE BUTTON */
 .btn2 {
-  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 14px 28px;
   border-radius: 30px;
+  font-size: 14px;
   cursor: pointer;
 
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  box-shadow:
-    0 4px 20px rgba(0,0,0,0.05),
-    inset 0 1px 1px rgba(255,255,255,0.4);
-}
-
-.btn2:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(#fff, #fff),
+                    linear-gradient(45deg, #00cfff, #ff00cc);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
