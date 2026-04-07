@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +19,24 @@ nav {
   align-items: center;
 }
 
+/* LOGO */
 .logo {
-  font-weight: bold;
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* MENU */
 nav ul {
   display: flex;
   list-style: none;
@@ -36,6 +48,7 @@ nav ul li {
   cursor: pointer;
 }
 
+/* BUTTON CONTACT */
 .contact {
   background: linear-gradient(45deg, #3b82f6, #a855f7);
   border: none;
@@ -62,7 +75,6 @@ nav ul li {
   font-weight: bold;
   background: linear-gradient(90deg, #06b6d4, #a855f7);
 
-  /* FIX WARNING */
   background-clip: text;
   -webkit-background-clip: text;
 
@@ -76,7 +88,7 @@ nav ul li {
   line-height: 1.6;
 }
 
-/* BUTTON */
+/* BUTTON GROUP */
 .btn-group {
   margin-top: 30px;
   display: flex;
